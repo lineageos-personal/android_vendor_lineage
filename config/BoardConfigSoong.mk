@@ -32,6 +32,15 @@ ifneq ($(TARGET_BOOTANIMATION),)
 $(call soong_config_set,lineage_bootanimation,prebuilt_file,$(TARGET_BOOTANIMATION))
 endif
 
+# Camera
+ifneq ($(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED),)
+    $(error TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED is deprecated, please migrate to soong_config_set,camera,override_format_from_reserved)
+endif
+
+ifneq ($(TARGET_CAMERA_PACKAGE_NAME),)
+    $(error TARGET_CAMERA_PACKAGE_NAME is deprecated, please migrate to soong_config_set,camera,package_name)
+endif
+
 # Charger
 lineage_charger_density := mdpi
 ifneq (,$(TARGET_SCREEN_DENSITY))
