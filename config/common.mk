@@ -289,6 +289,9 @@ CUSTOM_LOCALES += \
     fur_IT \
     nn_NO
 
+PRODUCT_PACKAGES += \
+    OmniJaws
+
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/crowdin/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/crowdin/overlay
 
